@@ -6,7 +6,9 @@ import Rodape from './componentes/Rodape';
 function App() {
   return (
     <>
-      <Cabecalho/>
+      <Cabecalho logo="imagens/header-logo.png" titulo="Supermercado Favorito"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Rodape logo="imagens/header-logo.png"/>
     </>
   );
 }
