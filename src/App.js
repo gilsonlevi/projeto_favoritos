@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Cabecalho logo="imagens/header-logo.png" titulo="Supermercado Favorito"/>
-      <Artigo />
+      <Artigo img="imagens/Cafe.png"/>
 
       <Rodape logo="imagens/header-logo.png"/>
     </>
