@@ -8,41 +8,41 @@ import { useState } from 'react'
 
 const Artigo = (props) => {
 
-  const [name, setName] = useState("Levi")
-  const [number, setNumber] = useState(1)
-  console.log(name)
+  // const [name, setName] = useState("Levi")
+  // const [number, setNumber] = useState(1)
+  // console.log(name)
 
-  const changeNumber = () => {
-    // Previous Value
-    setNumber((prevNumber) => prevNumber + 1)
-    setNumber((prevNumber) => prevNumber + 1)
-  }
-  const reiniciar = () => {
-    setNumber(0)
-  }
+  // const changeNumber = () => {
+  //   // Previous Value
+  //   setNumber((prevNumber) => prevNumber + 1)
+  //   setNumber((prevNumber) => prevNumber + 1)
+  // }
+  // const reiniciar = () => {
+  //   setNumber(0)
+  // }
 
   return (
-    // <div className={styles.artigo}>
-    //   <Conteudo img="imagens/ImgDoritos.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    //   <Conteudo img="imagens/imgCafe.png"/>
-    // </div>
+    <div className={styles.artigo}>
+      <Conteudo img="imagens/ImgDoritos.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+      <Conteudo img="imagens/imgCafe.png"/>
+    </div>
 
-    <>
-      <h2>Meu nome é : {name}</h2>
-      <input type="text" value={name} onChange={e => setName(e.target.value)}/>
+    // <>
+    //   <h2>Meu nome é : {name}</h2>
+    //   <input type="text" value={name} onChange={e => setName(e.target.value)}/>
 
-      <p>Número: {number}</p>
-      <button onClick={changeNumber}>Mudar número</button>
-      <button onClick={reiniciar}>Reiniciar</button>
-    </>
+    //   <p>Número: {number}</p>
+    //   <button onClick={changeNumber}>Mudar número</button>
+    //   <button onClick={reiniciar}>Reiniciar</button>
+    // </>
   )
 }
 
