@@ -6,21 +6,26 @@ import { useState } from 'react'
 export default function Conteudo(props) {
   const [nomeSite, setNomeSite]=useState('Nome do Site')
   const [url, setUrl]=useState('URL')
-  
-  let favoritos=[]
+  const [favoritos, setFavoritos] = useState([])
 
   function salvarFavorito(){
+    setFavoritos([...favoritos, {nomeSite, url}])
     console.log('favoritos>>>:', favoritos)
-    console.loh('estados>>>:', {nomeSite, url})
-    favoritos =[...favoritos, {nomeSite, url}]
-    console.log('favoritos 2>>>:', favoritos)
     localStorage.setItem("Favorito", JSON.stringify({nomeSite, url}))
   }
 
 
   return (
-      <div className={styles.area}>
-        Conteudo
+    <div className={styles.area}>
+        <ul>
+        {favoritos[0]!== undefined &&
+          favoritos.map((favorito) => (
+          <li key={favorito.nomeSite}>{favorito.nomeSite}</li>
+        ))}
+        </ul>
+
+
+        <h1>Conteudo</h1>
         <form className={styles.formulario}>
           <label>Nome do site</label>
           <h1>{nomeSite}</h1>
@@ -42,9 +47,9 @@ export default function Conteudo(props) {
             console.log(url)
 
           }}></input><br/>
-          <button onClick={()=>salvarFavorito()}>Salvar</button>
+          <input type="button" value="Salvar" 
+          onClick={()=> salvarFavorito()}/>
         </form>
-
       </div>
   )
 }
